@@ -58,6 +58,35 @@
       position: relative;
       top: 1px;
     }
+    @keyframes sliding {
+    0%   {background-color:red; width:50%;}
+    25%  {background-color:yellow; width:100%;}
+    50%  {background-color:blue; width:50%;}
+    75%  {background-color:green; width:100%;}
+    100% {background-color:red; width:50%;}
+  }
+  .textanimation{
+    animation-name: sliding;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%
+    z-index
+  }
+  @keyframes spin {
+    0%   {transform:rotate(0deg)}
+    25%  {transform:rotate(340deg)}
+    50%  {transform:rotate(180deg)}
+    75%  {transform:rotate(220deg)}
+    100% {transform:rotate(3620deg)}
+}
+.spinn{
+  animation-name: spin;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+}
   </style>
   <script>
     function nizeAudio() {
@@ -75,34 +104,38 @@
 
 </head>
 
-<body>
-  <IMG SRC="gifs/knuckles.gif">
-  <IMG SRC="gifs/knuckles.gif">
-  <IMG SRC="gifs/knuckles.gif">
-
+<body  style = 'background: url("gifs/ahaha.gif"); background-size: cover; border: 100px solid transparent; border-image: url("gifs/giphy.gif") 20 100% round;'>
+  <div style = 'display: block; margin-left: auto; margin-right: auto; width: 50%'>
+  <IMG SRC="gifs/knuckles.gif" class = 'spinn' style = 'width: 32%'>
+  <IMG SRC="gifs/knuckles.gif" style = 'width: 32%'>
+  <IMG SRC="gifs/knuckles.gif" style = 'width: 32%'>
+  </div>
   <header>
     <div class="container">
-      <h1 class="logo">Just got faded, me and muh suhn</h1>
+      <h1 class = 'textanimation' style = 'text-align: center;' class="logo">Just got faded, me and muh suhn</h1>
     </div>
   </header>
 
-  <h1> brandonthelightning@hotmail.com </h1>
-  <h1> messenger: Brandon Tran </h1>
-  <p> The jokeaz </p>
+  <h1 class = 'textanimation' style = 'text-align: center;'> brandonthelightning@hotmail.com </h1>
+  <h1 class = 'textanimation' style = 'text-align: center;' > messenger: Brandon Tran </h1>
+  <p class = 'textanimation' style = 'text-align: center;' > The jokeaz </p>
+
   <audio id="ahhaha" src="/sounds/ahhaha.mp4" preload="auto">ahhaha</audio>
   <audio id="yee" src="/sounds/yee.mp3" preload="auto">yee</audio>
   <audio id="play yourself" src="/sounds/khaled.mp3" preload="auto">khaled</audio>
   <audio id="police_help" src="/sounds/police_help.mp3" preload="auto">police_help</audio>
-
-  <button accesskey="s" class="stopButton" onclick="nizeAudio();">stop</button><br><br>
-  <button accesskey="d" class="audioButton" onclick="tunnaz('ahhaha');">ahhaha</button><br><br>
-  <button accesskey="f" class="audioButton" onclick="tunnaz('khaled');">khaled</button><br><br>
-  <button accesskey="g" class="audioButton" onclick="tunnaz('yee');">yee</button><br><br>
-  <button accesskey="h" class="audioButton" onclick="tunnaz('police_help');">police help</button><br><br>
-  <IMG SRC="gifs/water.gif">
-  <IMG SRC="gifs/water.gif">
-  <IMG SRC="gifs/water.gif">
-
+<div style = 'margin: auto; width: 50%;'>
+  <button accesskey="s" class="stopButton" onclick="nizeAudio();" style = "width: 100%">stop</button><br><br>
+  <button accesskey="d" class="audioButton" onclick="tunnaz('ahhaha');" style = "width: 100%">ahhaha</button><br><br>
+  <button accesskey="f" class="audioButton" onclick="tunnaz('khaled');" style = "width: 100%">khaled</button><br><br>
+  <button accesskey="g" class="audioButton" onclick="tunnaz('yee');" style = "width: 100%">yee</button><br><br>
+  <button accesskey="h" class="audioButton" onclick="tunnaz('police_help');" style = "width: 100%">police help</button><br><br>
+</div>
+  <div style = 'margin-top: 40px; display: block; margin-left: auto; margin-right: auto; width: 50%'>
+<IMG SRC="gifs/water.gif" class = 'spinn' style = 'width: 32%'>
+<IMG SRC="gifs/water.gif" style = 'width: 32%'>
+<IMG SRC="gifs/water.gif" class = 'spinn' style = 'width: 32%'>
+</div>
 </body>
 
 </html>
