@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Just got faded, me and muh suhn</title>
+    <style>
+    .audioButton {
+    box-shadow: 3px 4px 0px 0px #1564ad;
+    background:linear-gradient(to bottom, #79bbff 5%, #378de5 100%);
+    background-color:#79bbff;
+    border-radius:5px;
+    border:1px solid #337bc4;
+    display:inline-block;
+    cursor:pointer;
+    color:#ffffff;
+    font-family:Arial;
+    font-size:17px;
+    font-weight:bold;
+    padding:12px 44px;
+    text-decoration:none;
+    text-shadow:0px 1px 0px #0a1929;
+  }
+  .audioButton:hover {
+    background:linear-gradient(to bottom, #378de5 5%, #79bbff 100%);
+    background-color:#378de5;
+  }
+  .audioButton:active {
+    position:relative;
+    top:1px;
+  }
+  .stopButton {
+	box-shadow: 3px 4px 0px 0px #8a2a21;
+	background:linear-gradient(to bottom, #c62d1f 5%, #f24437 100%);
+	background-color:#c62d1f;
+	border-radius:18px;
+	border:1px solid #d02718;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:7px 25px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #810e05;
+}
+.stopButton:hover {
+	background:linear-gradient(to bottom, #f24437 5%, #c62d1f 100%);
+	background-color:#f24437;
+}
+.stopButton:active {
+	position:relative;
+	top:1px;
+}
+
+      </style>
+    <script>
+      function nizeAudio()
+       {
+        sounds = document.getElementsByTagName('audio');
+        for (let i = 0; i < sounds.length; i++) {
+          sounds[i].pause();
+          sounds[i].currentTime = 0;
+        }
+       }
+      function tunnaz(audioID)
+       {
+        nizeAudio()
+        document.getElementById(audioID).play();
+       }
+     </script>
+
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+        <h1 class="logo">Just got faded, me and muh suhn</h1>
+      </div>
+    </header>
+
+    <h1> brandonthelightning@hotmail.com </h1>
+    <p> The jokeaz </p>
+
+    <audio id="ahhaha" src="sounds/ahhaha.mp3" preload="auto">ahhaha</audio>
+    <audio id="what_it_do_baby" src="sounds/what_it_do_baby.mp3" preload="auto">what_it_do_baby</audio>
+    <audio id="gratata" src="sounds/gratata.mp3" preload="auto">gratata</audio>
+    <audio id="police_help" src="sounds/police_help.mp3" preload="auto">police_help</audio>
+
+    <button accesskey="s" class="stopButton" onclick="nizeAudio();">stop</button><br><br>
+    <button accesskey="d" class="audioButton" onclick="tunnaz('ahhaha');">ahhaha</button><br><br>
+    <button accesskey="f" class="audioButton" onclick="tunnaz('gratata');">gratata</button><br><br>
+    <button accesskey="g" class="audioButton" onclick="tunnaz('what_it_do_baby');">what it do baby</button><br><br>
+    <button accesskey="h" class="audioButton" onclick="tunnaz('police_help');">police help</button><br><br>
+  </body>
+</html>
